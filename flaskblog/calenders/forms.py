@@ -1,0 +1,30 @@
+from flask_wtf import FlaskForm
+from wtforms import BooleanField, SubmitField
+
+
+class CalenderForm(FlaskForm):
+	mon1 = BooleanField('Monday(10-12)')
+	mon2 = BooleanField('Monday(13-15)')
+	mon3 = BooleanField('Monday(15-18)')
+	mon4 = BooleanField('Monday(All)')
+	tues1 = BooleanField('Tuesday(10-12)')
+	tues2 = BooleanField('Tuesday(13-15)')
+	tues3 = BooleanField('Tuesday(15-18)')
+	tues4 = BooleanField('Tuesday(All)')
+	wed1 = BooleanField('Wednesday(10-12)')
+	wed2 = BooleanField('Wednesday(13-15)')
+	wed3 = BooleanField('Wednesday(15-18)')
+	wed4 = BooleanField('Wednesday(All)')
+	thurs1 = BooleanField('Thursday(10-12)')
+	thurs2 = BooleanField('Thursday(13-15)')
+	thurs3 = BooleanField('Thursday(15-18)')
+	thurs4 = BooleanField('Thursday(All)')
+	fri1 = BooleanField('Friday(10-12)')
+	fri2 = BooleanField('Friday(13-15)')
+	fri3 = BooleanField('Friday(15-18)')
+	fri4 = BooleanField('Friday(All)')
+	sat1 = BooleanField('Saturday(10-12)')
+	sat2 = BooleanField('Saturday(13-15)')
+	sat3 = BooleanField('Saturday(15-18)')
+	sat4 = BooleanField('Saturday(All)')
+	submit = SubmitField('Submit')

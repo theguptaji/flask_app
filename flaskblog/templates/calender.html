@@ -1,0 +1,63 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="content-section">
+  <legend class="border-bottom mb-4">{{ legend }}</legend>
+  <table class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Days</th>
+        <th scope="col">10:00 - 12:00</th>
+        <th scope="col">13:00 - 16:00</th>
+        <th scope="col">16:00 - 19:00</th>
+        <th scope="col">Whole</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Monday <br> {{ weekdays(0)}}</th>
+        <td>{{ val_func(calender.mon1) }}</td>
+        <td>{{ val_func(calender.mon2) }}</td>
+        <td>{{ val_func(calender.mon3) }}</td>
+        <td>{{ val_func(calender.mon4) }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Tuesday <br> {{ weekdays(1)}}</th>
+        <td>{{ val_func(calender.tues1) }}</td>
+        <td>{{ val_func(calender.tues2) }}</td>
+        <td>{{ val_func(calender.tues3) }}</td>
+        <td>{{ val_func(calender.tues4) }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Wednesday <br> {{ weekdays(2)}}</th>
+        <td>{{ val_func(calender.wed1) }}</td>
+        <td>{{ val_func(calender.wed2) }}</td>
+        <td>{{ val_func(calender.wed3) }}</td>
+        <td>{{ val_func(calender.wed4) }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Thursday <br> {{ weekdays(3)}}</th>
+        <td>{{ val_func(calender.thurs1) }}</td>
+        <td>{{ val_func(calender.thurs2) }}</td>
+        <td>{{ val_func(calender.thurs3) }}</td>
+        <td>{{ val_func(calender.thurs4) }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Friday <br> {{ weekdays(4)}}</th>
+        <td>{{ val_func(calender.fri1) }}</td>
+        <td>{{ val_func(calender.fri2) }}</td>
+        <td>{{ val_func(calender.fri3) }}</td>
+        <td>{{ val_func(calender.fri4) }}</td>
+      </tr>
+      <tr>
+        <th scope="row">Saturday <br> {{ weekdays(5)}}</th>
+        <td>{{ val_func(calender.sat1) }}</td>
+        <td>{{ val_func(calender.sat2) }}</td>
+        <td>{{ val_func(calender.sat3) }}</td>
+        <td>{{ val_func(calender.sat4) }}</td>
+      </tr>  
+    </tbody>
+  </table>
+
+<a class="btn btn-secondary btn-sm mt-1 mb-1" href="{{ url_for('calenders.update') }}">Update</a>
+</div>
+{% endblock content %}
